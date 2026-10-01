@@ -12,11 +12,13 @@ ENV/
 # Sensitive secrets and API keys (DO NOT COMMIT)
 .env
 *.env
+.env.*
 secrets.json
 config.local.json
 *.key
 *.pem
 *.token
+!.env.example
 
 # Incident run outputs & log artifacts
 *.log
