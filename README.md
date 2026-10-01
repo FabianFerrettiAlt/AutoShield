@@ -16,11 +16,11 @@ AutoShield is a defensive security automation pipeline designed to detect suspec
 
 ## Prerequisites & Installation
 
-- **Environment:** Ubuntu Linux (Native, VM, or WSL2) 
+- **Environment:** Ubuntu Linux (Native, VM, or WSL2)
 - **Python Runtime:** Python 3.10+
 
 1. **Clone the repository:**
-   ```bash
+
    git clone <REPO_URL>
    cd <REPO_FOLDER>
 
