@@ -1,8 +1,9 @@
 """filter.py - Data Parsing, Validation & Threat Scoring Module.
 
 Part of the AutoShield Project (CYB333 Security Automation).
-
 Role: Data Parsing & Validation Lead (Role 2)
+Author: Fabian Ferretti
+
 Objective:
     1. Ingest raw candidate IP strings provided by Member 1 (ingestion.py).
     2. Extract IPv4 addresses using regular expressions and validate mathematical
