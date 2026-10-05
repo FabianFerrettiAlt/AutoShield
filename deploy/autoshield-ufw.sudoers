@@ -1,0 +1,3 @@
+# Validate with: visudo -cf /etc/sudoers.d/autoshield
+# Install the helper as root-owned and not writable by the AutoShield account.
+autoshield ALL=(root) NOPASSWD: /usr/local/sbin/autoshield-ufw
