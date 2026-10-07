@@ -2,6 +2,7 @@ import json
 #imports json lib
 import os
 #imports build in os module allowing code to work with os
+from dotenv import load_dotenv
 from datetime import datetime, timezone
 #imports datetime with timezone for tracking purposes from datetime
 import requests
@@ -9,8 +10,11 @@ import requests
 
 Log_File = "blocked_threats.json"
 #Location to send threats with the file name
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1557208730037256252/D1mrc0c4etBp3fb44cgX3KH7taueoedelwN7FL_nqQwxOoZI-1w-Y8WwypyDRwNpuvCb"
+DISCORD_WEBHOOK_URL = os.getenv("https://discord.com/api/webhooks/1557208730037256252/D1mrc0c4etBp3fb44cgX3KH7taueoedelwN7FL_nqQwxOoZI-1w-Y8WwypyDRwNpuvCb")
 #URL for where all records will be sent for easy viewing in discord channel
+if not DISCORD_WEBHOOK_URL:
+    raise ValueError("DISCORD_WEBHOOK_URL is not set in environment or .env file")
+print("Webhook URL loaded successfully")
 
 def log_remediation_record(record_data: dict, filepath: str = Log_File):
 #filepath where recorded data will be sent
@@ -53,3 +57,5 @@ def log_remediation_record(record_data: dict, filepath: str = Log_File):
         print(f"Error occurred while sending remediation record outbound: {e}")
 #If any other code comes back, respond with the else print statement, any network failures prints the except statement
 
+if __name__ == "__main__":
+    log_remediation_record({"ip":"1.2.3.4", "score": 90, "action": "BLOCK"}, filepath = "test_blocked_threats.json")
