@@ -59,3 +59,4 @@ def log_remediation_record(record_data: dict, filepath: str = Log_File):
 
 if __name__ == "__main__":
     log_remediation_record({"ip":"1.2.3.4", "score": 90, "action": "BLOCK"}, filepath = "test_blocked_threats.json")
+#This is the dummy test
