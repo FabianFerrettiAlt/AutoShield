@@ -8,6 +8,7 @@ __pycache__/
 venv/
 env/
 ENV/
+.env/
 
 # Sensitive secrets and API keys (DO NOT COMMIT)
 .env
