@@ -1,5 +1,5 @@
 # AutoShield: Automated Threat Intelligence & Host Firewall Enforcer
-**CYB333: Security Automation — Team 3 Final Project**
+**CYB333: Security Automation - Team 3 Final Project**
 
 AutoShield is an automated defensive security pipeline that parses raw authentication logs, evaluates candidate IP reputation against external threat intelligence (AbuseIPDB), enforces host-level firewall drop rules via Linux UFW, and generates structured incident reports.
 
@@ -17,10 +17,10 @@ AutoShield is an automated defensive security pipeline that parses raw authentic
 
 ## Team Contributions & Role Breakdown
 
-* **Jonathan Santoyo (Threat Ingestion Lead — `ingestion.py`):** Developed authentication log ingestion, regular expression extraction of failed login candidates, and initial test drivers.
-* **Fabian Ferretti (Data Parsing & Validation Lead — `filter.py`):** Implemented syntax validation, RFC 1918 private IP whitelisting, live AbuseIPDB REST API scoring, error handling, and pipeline orchestration.
-* **Jesse Smith (Firewall Automation Lead — `enforcer.py` & `feed_verifier.py`):** Built the host firewall execution engine, SQLite expiration lease tracking, detached GPG feed verification, and dry-run preview capabilities.
-* **Cody Zibura (Alerting & Reporting Lead — `notifier.py`):** Implemented the structured JSON remediation logger (`blocked_threats.json`) and outbound Discord webhook alerting logic.
+* **Jonathan Santoyo (Threat Ingestion Lead - `ingestion.py`):** Developed authentication log ingestion, regular expression extraction of failed login candidates, and initial test drivers.
+* **Fabian Ferretti (Data Parsing & Validation Lead - `filter.py`):** Implemented syntax validation, RFC 1918 private IP whitelisting, live AbuseIPDB REST API scoring, error handling, and pipeline orchestration.
+* **Jesse Smith (Firewall Automation Lead - `enforcer.py` & `feed_verifier.py`):** Built the host firewall execution engine, SQLite expiration lease tracking, detached GPG feed verification, and dry-run preview capabilities.
+* **Cody Zibura (Alerting & Reporting Lead - `notifier.py`):** Implemented the structured JSON remediation logger (`blocked_threats.json`) and outbound Discord webhook alerting logic.
 
 ---
 
