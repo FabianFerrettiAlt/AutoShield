@@ -9,7 +9,7 @@ import requests
 
 Log_File = "blocked_threats.json"
 #Location to send threats with the file name
-DISCORD_WEBHOOK_URL = "https://discord.com"
+DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1557208730037256252/D1mrc0c4etBp3fb44cgX3KH7taueoedelwN7FL_nqQwxOoZI-1w-Y8WwypyDRwNpuvCb"
 #URL for where all records will be sent for easy viewing in discord channel
 
 def log_remediation_record(record_data: dict, filepath: str = Log_File):
