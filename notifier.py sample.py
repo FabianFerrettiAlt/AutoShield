@@ -45,7 +45,7 @@ def log_remediation_record(record_data: dict, filepath: str = Log_File):
                 }
             ]
         }
-        response = requests.post(DISCORD_WEBHOOK_URL, json=payload)
+        response = requests.post(DISCORD_WEBHOOK_URL, json=payload, timeout = 5)
 #try statement to build an automatic payload to be sent to the discord webhook with the title, description, red color, and timestamp features
 
         if response.status_code == 204:
